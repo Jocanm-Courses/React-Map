@@ -1,5 +1,7 @@
 import { createContext, useContext } from 'react';
-import { Map } from 'mapbox-gl';
+//@ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import { Map } from '!mapbox-gl';
 
 
 export interface MapContextProps {

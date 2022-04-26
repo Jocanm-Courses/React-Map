@@ -7,6 +7,7 @@ export interface MapContextProps {
     map?: Map
 
     setMap: (map: Map) => void;
+    getRouteBetweenPoints: (start: [number, number], end: [number, number]) => Promise<void>
 }
 
 

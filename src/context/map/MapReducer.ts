@@ -1,7 +1,9 @@
-import { Map } from 'mapbox-gl';
+import { Map, Marker } from 'mapbox-gl';
 import { MapProps } from './MapProvider';
 
-type MapAction = { type: 'setMap', payload: Map }
+type MapAction =
+    | { type: 'setMap', payload: Map }
+    | { type: 'setMarkers', payload: Marker[] }
 
 export const MapReducer = (state: MapProps, { payload, type }: MapAction): MapProps => {
 
@@ -12,6 +14,12 @@ export const MapReducer = (state: MapProps, { payload, type }: MapAction): MapPr
                 ...state,
                 isMapReady: true,
                 map: payload
+            }
+
+        case "setMarkers":
+            return {
+                ...state,
+                markers: payload
             }
 
         default:

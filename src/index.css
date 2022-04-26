@@ -7,3 +7,14 @@
     width: 100vw;
     height: 100vh;
 }
+
+.search-container {
+    padding:10px;
+    position: fixed;
+    top: 20px; 
+    left: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px #0002;
+    width: 400px;
+    border-radius: 5px;
+}
